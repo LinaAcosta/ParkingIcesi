@@ -71,10 +71,10 @@ public class DataBaseHandler {
     }
     public void eliminarUsuario(String iduser){
         try{
+            eliminarUsuarioPivote(iduser);
             String sql = "DELETE FROM usuarios WHERE id = '%ID%'";
             sql = sql.replace("%ID%",iduser);
             statement.execute(sql);
-            eliminarUsuarioPivote(iduser);
             System.out.println("Usuario eliminado");
         }catch (SQLException ex){
             ex.printStackTrace();

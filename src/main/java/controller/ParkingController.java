@@ -21,6 +21,7 @@ public class ParkingController implements EventHandler<ActionEvent>, InsertarCar
         dataBaseHandler = DataBaseHandler.getInstance();
         view.getInsertarUsuarioBtn().setOnAction(this);
         view.getInsertarCarroBtn().setOnAction(this);
+        view.getEliminar().setOnAction(this);
         cargarUsuarios();
         cargarCarros();
         cargarUsuariosCombo();
